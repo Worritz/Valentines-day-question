@@ -24,7 +24,6 @@ function selectOption(option) {
 }
 
 
-
 // Function to display the cat.gif initially
 function displayCat() {
     // Get the container where the image will be displayed
