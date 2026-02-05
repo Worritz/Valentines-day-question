@@ -1,14 +1,15 @@
 // script.js
 
+
+
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
     if (option === 'yes') {
         // Flash rainbow colors
-        flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none'; // Hide the question
+        
             displayCatHeart(); // Display the cat-heart.gif
-        });
+        ;
     } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
         document.getElementById('no-button').innerText = 'You sure?'; 
@@ -23,22 +24,8 @@ function selectOption(option) {
     }
 }
 
-// Function to flash rainbow colors and then execute a callback function
-function flashRainbowColors(callback) {
-     var colors = ['#FADADD', '#FADADD', '#FADADD', '#FADADD', '#FADADD', '#FADADD', '#FADADD'];
-    var i = 0;
-    var interval = setInterval(function() {
-        document.body.style.backgroundColor = colors[i];
-        i = (i + 1) % colors.length;
-    }, 200); // Change color every 200 milliseconds
-    setTimeout(function() {
-        clearInterval(interval);
-        document.body.style.backgroundColor = ''; // Reset background color
-        if (callback) {
-            callback();
-        }
-    }, 2000); // Flash colors for 2 seconds
-}
+
+
 
 // Function to display the cat.gif initially
 function displayCat() {
