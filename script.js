@@ -23,22 +23,7 @@ function selectOption(option) {
     }
 }
 
-// Function to flash rainbow colors and then execute a callback function
-function flashRainbowColors(callback) {
-    var colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
-    var i = 0;
-    var interval = setInterval(function() {
-        document.body.style.backgroundColor = colors[i];
-        i = (i + 1) % colors.length;
-    }, 200); // Change color every 200 milliseconds
-    setTimeout(function() {
-        clearInterval(interval);
-        document.body.style.backgroundColor = ''; // Reset background color
-        if (callback) {
-            callback();
-        }
-    }, 2000); // Flash colors for 2 seconds
-}
+
 
 // Function to display the cat.gif initially
 function displayCat() {
@@ -71,6 +56,15 @@ function displayCatHeart() {
     // When the cat-heart image is fully loaded, add it to the image container
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
+        // Add the love text below the image
+        var loveText = document.createElement('div');
+        loveText.innerText = 'Ich liebe dich meine Süße';
+        loveText.style.textAlign = 'center';
+        loveText.style.marginTop = '16px';
+        loveText.style.fontFamily = 'Sacramento, cursive';
+        loveText.style.fontSize = '2em';
+        loveText.style.color = '#e75480';
+        imageContainer.appendChild(loveText);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
     };
