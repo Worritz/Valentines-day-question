@@ -53,7 +53,7 @@ function displayCatHeart() {
         loveText.style.marginTop = '16px';
         loveText.style.fontFamily = 'Sacramento, cursive';
         loveText.style.fontSize = '2em';
-        loveText.style.color = '#e75480';
+        loveText.style.color = '#ff0000';
         imageContainer.appendChild(loveText);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
